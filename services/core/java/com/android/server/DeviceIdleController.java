@@ -833,7 +833,7 @@ public class DeviceIdleController extends SystemService
                 MIN_DEEP_MAINTENANCE_TIME = mParser.getDurationMillis(
                         KEY_MIN_DEEP_MAINTENANCE_TIME,
                         !COMPRESS_TIME ? 30 * 1000L : 5 * 1000L);
-                long inactiveTimeoutDefault = (mSmallBatteryDevice ? 15 : 30) * 60 * 1000L;
+                long inactiveTimeoutDefault = (mSmallBatteryDevice ? 2 : 30) * 60 * 1000L;
                 INACTIVE_TIMEOUT = mParser.getDurationMillis(KEY_INACTIVE_TIMEOUT,
                         !COMPRESS_TIME ? inactiveTimeoutDefault : (inactiveTimeoutDefault / 10));
                 SENSING_TIMEOUT = mParser.getDurationMillis(KEY_SENSING_TIMEOUT,
